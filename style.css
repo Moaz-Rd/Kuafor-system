@@ -1,0 +1,202 @@
+/* style.css */
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #121212 !important; /* Dark background */
+  /* Keep your existing body styles */
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #fff !important; /* White text for dark mode */
+}
+
+/* Hero Section - Salon Style */
+.hero-section {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('./assets/mewo.jpg') no-repeat center center/cover;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.hero-section h1 {
+  font-size: 4rem;
+  animation: fadeInDown 1.5s;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  margin-top: 15vh;
+}
+
+.hero-section p {
+  font-size: 1.5rem;
+  animation: fadeInUp 2s;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Sections */
+.card {
+  border: none;
+  border-radius: 20px;
+  background: rgba(247, 247, 247, 0.95);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Form */
+.form-select, .form-control {
+  border-radius: 10px;
+  border: 1px solid #d8b1e0;
+}
+
+/* Stores List */
+#stores-container .store-card {
+  background: rgba(248, 249, 250, 0.8);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 10px 0;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  border: 1px solid #f0e6d9;
+}
+
+#stores-container .store-card:hover {
+  background-color: rgba(250, 224, 250, 0.9);
+  transform: scale(1.05);
+}
+
+/* Footer - Matching Salon Style */
+footer {
+  background: linear-gradient(to right, #d4374c, #da27e0);
+  color: white;
+  padding: 2rem 0;
+  position: relative;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, #d4374c, #da27e0);
+}
+
+/* Change "Available Branches" heading color */
+#stores-section .card h2 {
+  color: #000000 !important;
+ 
+}
+
+/* Buttons - Enhanced Style */
+.btn-primary {
+  background-color: #121212;
+  border-color: #ae1eda;
+}
+
+.btn-primary:hover {
+  background-color: #ae1eda;
+  border-color: #070707;
+}
+
+.btn-outline-light {
+  border-color: white;
+  color: white;
+}
+
+.btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  0% { transform: translateY(-50px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  0% { transform: translateY(50px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+#booking-section .card h2 {
+  color: #020202 !important;}
+
+  /* Confirmation Modal Fix */
+#confirmation-modal .modal-content {
+  background: #f9f5f0 !important;
+  border: none !important;
+  border-top: 5px solid #c237d4 !important;
+  border-radius: 15px !important;
+  padding: 20px !important;
+}
+
+#confirmation-modal .modal-header {
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+  display: block !important;
+}
+
+#confirmation-modal .modal-title {
+  color: #611c46 !important;
+  font-size: 1.5rem !important;
+  width: 100% !important;
+  text-align: center !important;
+  margin-bottom: 1rem !important;
+}
+
+#confirmation-modal .modal-body {
+  padding: 0 1rem !important;
+}
+
+#confirmation-modal #summary {
+  color: #69345e !important;
+  font-size: 1.1rem !important;
+  line-height: 1.6 !important;
+  margin-bottom: 1.5rem !important;
+}
+
+#confirmation-modal .modal-footer {
+  border-top: none !important;
+  justify-content: center !important;
+  padding-top: 0 !important;
+}
+
+#confirmation-modal #confirm-booking {
+  background-color: #611c46   !important;
+  border-color: #c931aa !important;
+  color: rgb(243, 243, 243) !important;
+  min-width: 120px !important;
+  margin-right: 10px !important;
+}
+
+#confirmation-modal #confirm-booking:hover {
+  background-color: #cf31ba !important;
+}
+
+#confirmation-modal #cancel-booking {
+  color: #000000 !important;
+  border-color: #463345 !important;
+  background-color: transparent !important;
+  min-width: 120px !important;
+}
+
+#confirmation-modal #cancel-booking:hover {
+  background-color: rgba(136, 75, 138, 0.1) !important;
+}
+
+.btn-pink {
+  background-color: #ff2d75;
+  border-color: #d40052;
+  color: white;
+}
+
+.btn-pink:hover {
+  background-color: #d40052;
+  border-color: #ff2d75;
+}

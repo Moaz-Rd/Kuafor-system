@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beauty Salon Appointment System</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header class="hero-section text-center text-white d-flex align-items-center">
+    <div class="container">
+      <h1 class="display-3 fw-bold mb-3">🌟 Glamour Beauty Salons</h1>
+      <p class="lead mb-5">Experience the Beauty of Confidence.</p>
+      <div>
+        <button id="book-appointment" class="btn btn-primary btn-lg me-3">
+          <i class="fa-solid fa-calendar-plus me-2"></i> Book Appointment
+        </button>
+        <button id="view-stores" class="btn btn-outline-light btn-lg">
+          <i class="fa-solid fa-store me-2"></i> View Stores
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Sections -->
+  <main class="container py-5">
+
+    <!-- Booking Section -->
+    <section id="booking-section" class="d-none">
+      <div class="card shadow-lg p-5">
+        <h2 class="text-center mb-4 text-primary">Book Your Appointment</h2>
+        <form id="appointment-form" class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label">Service</label>
+            <select id="service" name="service" class="form-select" required></select>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Store</label>
+            <select id="store" name="store" class="form-select" required></select>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Beautician</label>
+            <select id="beautician" name="beautician" class="form-select" required></select>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Appointment Time</label>
+            <input type="datetime-local" id="appointment-time" name="appointment_time" class="form-control" required>
+          </div>
+          <div class="text-center mt-4">
+            <button type="submit" class="btn btn-pink btn-lg">Confirm Booking</button>
+          </div>
+        </form>
+        <div id="form-feedback" class="text-center mt-3"></div>
+      </div>
+    </section>
+
+    <!-- Stores Section -->
+    <section id="stores-section" class="d-none">
+      <div class="card shadow-lg p-5">
+        <h2 class="text-center mb-4 text-primary">Available Branches</h2>
+        <div id="stores-container" class="row"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Confirmation Modal -->
+<div id="confirmation-modal" class="modal fade" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title w-100 text-center">Appointment Summary</h4>
+      </div>
+      <div class="modal-body">
+        <p id="summary" class="text-center"></p>
+      </div>
+      <div class="modal-footer">
+        <button id="confirm-booking" class="btn btn-primary">Confirm</button>
+        <button id="cancel-booking" class="btn btn-outline-secondary">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+  
+  <!-- Footer -->
+  <footer class="text-center py-4 bg-primary text-white">
+    <p>&copy; 2025 Beauty Salons. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
